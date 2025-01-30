@@ -102,11 +102,11 @@
     [ "pico:GP20", "r1:2", "green", [ "h35.55", "v5.75" ] ],
     [ "rgb1:COM", "pico:GND.4", "green", [ "v57.2", "h192.1", "v-48" ] ],
     [ "r6:1", "pico:GP13", "green", [ "v0" ] ],
-    [ "r5:1", "pico:GP12", "green", [ "v0" ] ],
-    [ "r4:1", "pico:GP11", "green", [ "v0" ] ],
     [ "r6:2", "rgb1:R", "green", [ "v0", "h-66" ] ],
     [ "r5:2", "rgb1:G", "green", [ "v9.6", "h-27.6" ] ],
-    [ "r4:2", "rgb1:B", "green", [ "v0" ] ]
+    [ "r4:2", "rgb1:B", "green", [ "v0" ] ],
+    [ "pico:GP11", "r5:1", "green", [ "h-52.05", "v15.35" ] ],
+    [ "pico:GP12", "r4:1", "green", [ "h-13.65", "v5.75" ] ]
   ],
   "dependencies": {}
 }
