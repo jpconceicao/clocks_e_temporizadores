@@ -28,37 +28,37 @@ set(PICO_BOARD pico_w CACHE STRING "Board type")
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(clocks_e_temporizadores C CXX ASM)
+project(Atv_1_semaforo C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(clocks_e_temporizadores clocks_e_temporizadores.c )
+add_executable(Atv_1_semaforo Atv_1_semaforo.c )
 
-pico_set_program_name(clocks_e_temporizadores "clocks_e_temporizadores")
-pico_set_program_version(clocks_e_temporizadores "0.1")
+pico_set_program_name(Atv_1_semaforo "Atv_1_semaforo")
+pico_set_program_version(Atv_1_semaforo "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(clocks_e_temporizadores 0)
-pico_enable_stdio_usb(clocks_e_temporizadores 0)
+pico_enable_stdio_uart(Atv_1_semaforo 0)
+pico_enable_stdio_usb(Atv_1_semaforo 0)
 
 # Add the standard library to the build
-target_link_libraries(clocks_e_temporizadores
+target_link_libraries(Atv_1_semaforo
         pico_stdlib)
 
 # Add the standard include files to the build
-target_include_directories(clocks_e_temporizadores PRIVATE
+target_include_directories(Atv_1_semaforo PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}
 )
 
 # Add any user requested libraries
-target_link_libraries(clocks_e_temporizadores 
+target_link_libraries(Atv_1_semaforo 
         hardware_timer
         hardware_clocks
         
         )
 
-pico_add_extra_outputs(clocks_e_temporizadores)
+pico_add_extra_outputs(Atv_1_semaforo)
 

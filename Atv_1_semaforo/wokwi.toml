@@ -1,4 +1,4 @@
 [wokwi]
 version = 1
-firmware = 'build/CLOCKS_E_TEMPORIZADORES.uf2'
-elf = 'build/CLOCKS_E_TEMPORIZADORES.elf'
+firmware = 'build/Atv_1_semaforo.uf2'
+elf = 'build/Atv_1_semaforo.elf'

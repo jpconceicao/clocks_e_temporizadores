@@ -9,7 +9,7 @@
 
 #define RED_RGB 13
 #define GREEN_RGB 11
-#define BLUE_RGB 12  // Pino Amarelo para o wokwi
+#define BLUE_RGB 12
 
 typedef enum {
     VERMELHO,
@@ -34,14 +34,14 @@ int main()
     
 
     while (true) {
-        sleep_ms(9000);
-         printf("Repetição\n");
+        sleep_ms(1000);
+         printf("Passou 1 segundo\n");
     }
 }
 
 bool funcaro_de_repeticao_callback(struct repeating_timer *t)
 {
-    printf("3 segundos passou");
+    printf("Alterando o sinal");
     // Alternar entre os estados do semáforo
     switch (estado_atual) {
         case VERMELHO:
