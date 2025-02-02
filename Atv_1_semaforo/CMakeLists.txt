@@ -42,7 +42,7 @@ pico_set_program_version(Atv_1_semaforo "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
 pico_enable_stdio_uart(Atv_1_semaforo 0)
-pico_enable_stdio_usb(Atv_1_semaforo 0)
+pico_enable_stdio_usb(Atv_1_semaforo 1)
 
 # Add the standard library to the build
 target_link_libraries(Atv_1_semaforo

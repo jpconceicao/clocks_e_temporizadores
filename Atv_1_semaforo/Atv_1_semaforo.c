@@ -13,8 +13,8 @@
 
 typedef enum {
     VERMELHO,
-    VERDE,
-    AMARELO
+    AMARELO,
+    VERDE
 } estado_t;
 
 estado_t estado_atual = VERMELHO;
@@ -41,23 +41,10 @@ int main()
 
 bool funcaro_de_repeticao_callback(struct repeating_timer *t)
 {
-    printf("Alterando o sinal");
+    printf("Alterando o sinal\n");
     // Alternar entre os estados do semáforo
     switch (estado_atual) {
         case VERMELHO:
-            // LEDs normais
-            gpio_put(RED_LED_PIN, 0);
-            gpio_put(YELLOW_LED_PIN, 0);
-            gpio_put(GREEN_LED_PIN, 1);
-
-            // LED RGB
-            gpio_put(GREEN_RGB, 1);
-            gpio_put(BLUE_RGB, 0);
-            gpio_put(RED_RGB, 0);
-
-            estado_atual = VERDE;
-            break;
-        case VERDE:
             // LEDs normais
             gpio_put(RED_LED_PIN, 0);
             gpio_put(YELLOW_LED_PIN, 1);
@@ -71,6 +58,19 @@ bool funcaro_de_repeticao_callback(struct repeating_timer *t)
             estado_atual = AMARELO;
             break;
         case AMARELO:
+            // LEDs normais
+            gpio_put(RED_LED_PIN, 0);
+            gpio_put(YELLOW_LED_PIN, 0);
+            gpio_put(GREEN_LED_PIN, 1);
+
+            // LED RGB
+            gpio_put(GREEN_RGB, 1);
+            gpio_put(BLUE_RGB, 0);
+            gpio_put(RED_RGB, 0);
+
+            estado_atual = VERDE;
+            break;
+        case VERDE:
             // LEDs normais
             gpio_put(RED_LED_PIN, 1);
             gpio_put(YELLOW_LED_PIN, 0);
