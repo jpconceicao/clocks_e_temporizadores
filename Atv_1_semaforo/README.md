@@ -41,6 +41,8 @@ O código segue a lógica de funcionamento de um semáforo:
     ```
 3. Faça o upload do binário gerado para a **BitDog Lab**.
 
+## Link do vídeo
+- https://drive.google.com/file/d/1EpXevHQ5QS4u4VhAS_IFK01ChEzCXbTy/view?usp=sharing
 ## Observações
 - Os pinos **18, 19 e 20** são utilizados para simular o comportamento do semáforo em um **protoboard** com LEDs individuais, caso o LED RGB não esteja disponível.
 - O código utiliza um **timer repetitivo** para alterar os estados automaticamente.
