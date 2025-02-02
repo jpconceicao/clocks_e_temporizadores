@@ -1,3 +1,8 @@
+/* 
+* Feita por:     Jorge Palma 
+* Data:          31/01/2025
+*/
+
 #include <stdio.h>
 #include "pico/stdlib.h"
 #include "hardware/timer.h"
@@ -30,8 +35,6 @@ int main()
     struct repeating_timer timer;
 
     add_repeating_timer_ms(3000, funcaro_de_repeticao_callback, NULL, &timer);
-
-    
 
     while (true) {
         sleep_ms(1000);
