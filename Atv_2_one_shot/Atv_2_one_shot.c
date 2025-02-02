@@ -34,7 +34,7 @@ int main()
             sleep_ms(50);
             if (gpio_get(BOTAO_A) == 0)
             {
-                printf("Entrou na ativacao");
+                printf("Ligando todos os leds\n");
                 leds_ativos = true;
                 estado_atual = TRES_LIGADOS;
 
@@ -45,6 +45,7 @@ int main()
                 add_alarm_in_ms(3000, alarm_callback, NULL, false);
             }
         }
+        sleep_ms(30);  
     }
 }
 
@@ -67,19 +68,21 @@ void setup_gpios()
 }
 
 int64_t alarm_callback(alarm_id_t id, void *user_data) {
-    printf("Entrou na timer");
     switch (estado_atual) {
         case TRES_LIGADOS:
+            printf("Desligando o primeiro led!\n");
             gpio_put(RED_RGB, 0);
             estado_atual = DOIS_LIGADOS;
             add_alarm_in_ms(3000, alarm_callback, NULL, false);
             break;
         case DOIS_LIGADOS:
+            printf("Desligando o segundo led!\n");
             gpio_put(GREEN_RGB, 0);
             estado_atual = UM_LIGADO;
             add_alarm_in_ms(3000, alarm_callback, NULL, false);
             break;
         case UM_LIGADO:
+            printf("Desligando o terceiro led!\n");
             gpio_put(BLUE_RGB, 0);
             estado_atual = TUDO_OFF;
             leds_ativos = false;
